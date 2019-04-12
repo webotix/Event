@@ -1,0 +1,338 @@
+﻿
+@{
+    ViewBag.Title = "Gallery";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--Page Title-->
+<section class="page-title" style="background-image:url(../Content/images/background/gal1.jpg)">
+    <div class="auto-container">
+        <h1>Gallery</h1>
+
+        <ul class="bread-crumb">
+            <li><a href="/Home/Index">Home</a></li>
+            <li><a href="/Home/Gallery">Gallery</a></li>
+        </ul>
+
+    </div>
+
+    <!--Go Down Button-->
+    <div class="go-down">
+        <div class="curve scroll-to-target" data-target="#gallery-section"><span class="icon fa fa-arrow-down"></span></div>
+    </div>
+
+</section>
+
+
+<!--Gallery Section-->
+<section id="gallery-section" class="gallery-section pb-10">
+    <div class="container pb-20">
+        <div class="sec-title style-two">
+            <h3>OUR SUPPORTED GLLERY</h3>
+            <h2>WE OFFER YOU THE BEST SUPPORT</h2>
+            <div class="line"></div>
+        </div>
+
+        <!--Filter-->
+        <div class="filters">
+            <ul class="filter-tabs style-one clearfix anim-3-all">
+                <li class="filter" data-role="button" data-filter="all">All</li>
+                <li class="filter" data-role="button" data-filter=".engagement">Engagement</li>
+                <li class="filter" data-role="button" data-filter=".wedding">Wedding</li>
+                <li class="filter" data-role="button" data-filter=".photography">photography</li>
+                
+                <li class="filter" data-role="button" data-filter=".Birthday">BirthDay</li>
+                <li class="filter" data-role="button" data-filter=".Housewarming">House Warming</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="images-container">
+        <div class="filter-list clearfix">
+
+            <!--Image Box-->
+            <div class="image-box mix mix_all wedding photography engagement">
+                <div class="inner-box">
+                    <figure class="image">
+                        <a href='@Url.Content("~/Content/images/resource/gallery-image-1.jpg")' class="lightbox-image">
+                            <img class="img-responsive" src='@Url.Content("~/Content/images/resource/gallery-image-1.jpg")' alt="">
+                        </a>
+                    </figure>
+                    <a href='@Url.Content("~/Content/images/resource/gallery-image-1.jpg")' class="lightbox-image btn-zoom" title="Image Title Here"><span class="icon fa fa-dot-circle-o"></span></a>
+                </div>
+            </div>
+
+            <!--Image Box-->
+            <div class="image-box mix mix_all photography wedding">
+                <div class="inner-box">
+                    <figure class="image">
+                        <a href='@Url.Content("~/Content/images/resource/gb1.jpg")' class="lightbox-image">
+                            <img class="img-responsive" src='@Url.Content("~/Content/images/resource/gb1.jpg")' alt="">
+                        </a>
+                    </figure>
+                    <a href='@Url.Content("~/Content/images/resource/gb1.jpg")' class="lightbox-image btn-zoom" title="Image Title Here">
+                    <span class="icon fa fa-dot-circle-o"></span></a>
+                </div>
+            </div>
+
+            <!--Image Box-->
+            <div class="image-box mix mix_all engagement wedding">
+                <div class="inner-box">
+                    <figure class="image">
+                        <a href='@Url.Content("~/Content/images/resource/gw2.jpg")' class="lightbox-image">
+                            <img class="img-responsive" src='@Url.Content("~/Content/images/resource/gw2.jpg")' alt="">
+                        </a>
+                    </figure>
+                    <a href='@Url.Content("~/Content/images/resource/gw2.jpg")' class="lightbox-image btn-zoom" title="Image Title Here"><span class="icon fa fa-dot-circle-o"></span></a>
+                </div>
+            </div>
+
+            <!--Image Box-->
+            <div class="image-box mix mix_all engagement photography">
+                <div class="inner-box">
+                    <figure class="image">
+                        <a href='@Url.Content("~/Content/images/resource/gw3.jpg")' class="lightbox-image">
+                            <img class="img-responsive" src='@Url.Content("~/Content/images/resource/gw3.jpg")' alt="">
+                        </a>
+                    </figure>
+                    <a href='@Url.Content("~/Content/images/resource/gw3.jpg")' class="lightbox-image btn-zoom" title="Image Title Here"><span class="icon fa fa-dot-circle-o"></span></a>
+                </div>
+            </div>
+
+            <!--Image Box-->
+            <div class="image-box mix mix_all Birthday photography">
+                <div class="inner-box">
+                    <figure class="image">
+                        <a href='@Url.Content("~/Content/images/resource/gb4.jpg")' class="lightbox-image">
+                            <img class="img-responsive" src='@Url.Content("~/Content/images/resource/gb4.jpg")' alt="">
+                        </a>
+                    </figure>
+                    <a href='@Url.Content("~/Content/images/resource/gb4.jpg")' class="lightbox-image btn-zoom" title="Image Title Here"><span class="icon fa fa-dot-circle-o"></span></a>
+                </div>
+            </div>
+
+            <!--Image Box-->
+            <div class="image-box mix mix_all photography Housewarming">
+                <div class="inner-box">
+                    <figure class="image">
+                        <a href='@Url.Content("~/Content/images/resource/gho2.jpg")' class="lightbox-image">
+                            <img class="img-responsive" src='@Url.Content("~/Content/images/resource/gho4.jpg")' alt="">
+
+                        </a>
+                    </figure>
+                    <a href='@Url.Content("~/Content/images/resource/gho4.jpg")' class="lightbox-image btn-zoom" title="Image Title Here">
+                        <span class="icon fa fa-dot-circle-o"></span>
+                    </a>
+                    <a href='@Url.Content("~/Content/images/resource/gho5.jpg")' class="lightbox-image btn-zoom" title="Image Title Here">
+                        <span class="icon fa fa-dot-circle-o"></span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<script src='@Url.Content("~/Content/js/jquery.js")'></script>
+<script src='@Url.Content("~/Content/js/bootstrap.min.js")'></script>
+<script src='@Url.Content("~/Content/js/js-collection.js")'></script>
+<script src='@Url.Content("~/Content/js/jquery.mixitup.min.js")'></script>
+<script src='@Url.Content("~/Content/js/jquery.fancybox.pack.js")'></script>
+<script src='@Url.Content("~/Content/js/script.js")'></script>
+
+<style>
+
+    .gallery-section {
+        position: relative;
+        background: #ffffff;
+        padding: 70px 0px 50px;
+    }
+
+        .gallery-section.full-width {
+            padding-bottom: 0px;
+        }
+
+        .gallery-section .filter-tabs {
+            position: relative;
+            margin: 10px 0px 5px;
+            text-align: center;
+        }
+
+            .gallery-section .filter-tabs li {
+                position: relative;
+                display: inline-block;
+                line-height: 20px;
+                padding: 10px 15px;
+                min-width: 80px;
+                text-align: center;
+                color: #353535;
+                font-size: 12px;
+                text-transform: uppercase;
+                margin: 0px 7px 10px;
+                border: 1px solid #dadada;
+                cursor: pointer;
+                transition: all 0.5s ease;
+                -moz-transition: all 0.5s ease;
+                -webkit-transition: all 0.5s ease;
+                -ms-transition: all 0.5s ease;
+                -o-transition: all 0.5s ease;
+            }
+
+                .gallery-section .filter-tabs li:hover,
+                .gallery-section .filter-tabs li.active {
+                    border-color: #eb5310;
+                    color: #ffffff;
+                    background: #eb5310;
+                }
+
+        .gallery-section .images-container {
+            position: relative;
+        }
+
+        .gallery-section .image-box {
+            position: relative;
+            margin-bottom: 0px;
+            display: block;
+            border: 2px solid #ffffff;
+            width: 25%;
+        }
+
+        .gallery-section.slider-section {
+            padding-bottom: 0px;
+            overflow: hidden;
+        }
+
+            .gallery-section.slider-section .slider-outer {
+                margin-left: -2px;
+                margin-right: -2px;
+            }
+
+            .gallery-section.slider-section .image-box {
+                margin-bottom: 0px;
+                width: 100%;
+                display: block;
+                border: 2px solid #ffffff;
+                border-top-width: 4px;
+            }
+
+        .gallery-section .filter-list .image-box {
+            display: none;
+        }
+
+        .gallery-section.full-width .image-box {
+            width: 25%;
+            margin-bottom: 0px;
+        }
+
+        .gallery-section .image-box .inner-box {
+            position: relative;
+            width: 100%;
+            display: block;
+            background: #ffffff;
+            overflow: hidden;
+        }
+
+        .gallery-section .image-box .image {
+            position: relative;
+            display: block;
+            width: 100%;
+        }
+
+            .gallery-section .image-box .image img {
+                position: relative;
+                display: block;
+                width: 100%;
+                height: auto;
+                transition: all 0.5s ease;
+                -moz-transition: all 0.5s ease;
+                -webkit-transition: all 0.5s ease;
+                -ms-transition: all 0.5s ease;
+                -o-transition: all 0.5s ease;
+            }
+
+        .gallery-section .image-box:hover .image img {
+            -webkit-transform: scale(1.1,1.1);
+            -ms-transform: scale(1.1,1.1);
+            -o-transform: scale(1.1,1.1);
+            -moz-transform: scale(1.1,1.1);
+            transform: scale(1.1,1.1);
+        }
+
+        .gallery-section .image-box .zoom-btn {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            display: block;
+            text-align: center;
+            font-size: 42px;
+            color: #92b201;
+            outline: 2px solid #92b201;
+            outline-offset: -10px;
+            -webkit-transform: scale(0,0);
+            -ms-transform: scale(0,0);
+            -o-transform: scale(0,0);
+            -moz-transform: scale(0,0);
+            transform: scale(0,0);
+            transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -webkit-transition: all 0.5s ease;
+            -ms-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+        }
+
+            .gallery-section .image-box .zoom-btn .icon {
+                position: relative;
+                display: inline-block;
+                line-height: 50px;
+                top: 50%;
+                margin-top: -25px;
+            }
+
+        .gallery-section .image-box .inner-box:hover .zoom-btn {
+            background-color: rgba(255,255,255,0.70);
+            -webkit-transform: scale(1,1);
+            -ms-transform: scale(1,1);
+            -o-transform: scale(1,1);
+            -moz-transform: scale(1,1);
+            transform: scale(1,1);
+        }
+
+        .gallery-section .image-box .btn-zoom {
+            position: absolute;
+            left: 0px;
+            top: -100%;
+            width: 100%;
+            text-align: center;
+            height: 100%;
+            display: block;
+            background: rgba(0,0,0,0.70);
+            opacity: 0;
+            transition: all 500ms ease;
+            -moz-transition: all 500ms ease;
+            -webkit-transition: all 500ms ease;
+            -ms-transition: all 500ms ease;
+            -o-transition: all 500ms ease;
+        }
+
+        .gallery-section .image-box:hover .btn-zoom {
+            top: 0px;
+            opacity: 1;
+        }
+
+        .gallery-section .image-box .btn-zoom .icon {
+            position: relative;
+            width: 30px;
+            height: 30px;
+            font-size: 42px;
+            line-height: 30px;
+            display: inline-block;
+            top: 50%;
+            margin-top: -15px;
+            color: #eb5310;
+        }
+</style>
+

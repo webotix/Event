@@ -1,0 +1,92 @@
+﻿
+@{
+    ViewBag.Title = "SuccessStories";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--Page Title-->
+<section class="page-title" style="background-image:url(../Content/images/background/su1.jpg)">
+    <div class="auto-container">
+
+        <ul class="bread-crumb">
+            <li><a href="/Home/Index">Home</a></li>
+            <li><a href="/Home/SuccessStories">SuccessStories</a></li>
+        </ul>
+
+    </div>
+
+    <!--Go Down Button-->
+    <div class="go-down">
+        <div class="curve scroll-to-target" data-target="#sidebar-section"><span class="icon fa fa-arrow-down"></span></div>
+    </div>
+
+</section>
+<!--Blog Section-->
+<section class="blog-section style-two">
+    <div class="auto-container pt-60 pb-30">
+        <div class="sec-title text-center">
+            <h3>VISIT OUR LATEST POST</h3>
+            <h2>DON'T MISS OUR BLOG</h2>
+            <div class="mb-30 mt-20"> <img class="img-responsive" src='@Url.Content("~/Content/images/title-bottom.png")' alt=""></div>
+        </div>
+        <div class="row">
+            <!--Post-->
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 blog-post wow fadeInRight" data-wow-delay="600ms" data-wow-duration="1500ms">
+                <article class="inner-box p-xs-20">
+                    <div class="image"><a href="blog-detail.html"><img class="img-responsive" src='@Url.Content("~/Content/images/resource/blog1.jpg")' alt=""></a></div>
+                    <div class="post-title"><h2><a href="/Events/Wedding">Wedding</a></h2></div>
+                    <div class="post-info">
+                        <a href="/Events/Wedding"><span class="fa fa-user"></span>Varun Kumar</a> &ensp;&ensp; <a href="#">
+                            <span class="fa fa-clock-o"></span>Dec 8, 2018
+                        </a>
+                    </div>
+                    <div class="post-desc"></div>
+                    <div class="more-link"><a class="thm-btn btn-sm read-more text-black" href="/Home/Blog">READ MORE</a></div>
+                </article>
+            </div>
+            <!--Post-->
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 blog-post wow fadeInRight" data-wow-delay="300ms" data-wow-duration="1500ms">
+                <article class="inner-box p-xs-20">
+                    <div class="image"><a href="blog-detail.html"><img class="img-responsive" src='@Url.Content("~/Content/images/resource/blog2.jpg")' alt=""></a></div>
+                    <div class="post-title"><h2><a href="/Events/Engagement">Engagement</a></h2></div>
+                    <div class="post-info"><a href="#"><span class="fa fa-user"></span>Keeran</a> &ensp;&ensp; <a href="#"><span class="fa fa-clock-o"></span>June 8, 2015</a></div>
+                    <div class="post-desc"></div>
+                    <div class="more-link"><a class="thm-btn btn-sm read-more text-black" href="/Home/Blog">READ MORE</a></div>
+                </article>
+            </div>
+            <!--Post-->
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 blog-post wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
+                <article class="inner-box p-xs-20">
+                    <div class="image"><a href="blog-detail.html"><img class="img-responsive" src='@Url.Content("~/Content/images/resource/blog3.jpg")' alt=""></a></div>
+                    <div class="post-title"><h2><a href="/Events/BirthDay">BirthDay Party</a></h2></div>
+                    <div class="post-info"><a href="/Events/BirthDay"><span class="fa fa-user"></span>Raghu</a> &ensp;&ensp; <a href="#"><span class="fa fa-clock-o"></span>sep 8, 2015</a></div>
+                    <div class="post-desc"></div>
+                    <div class="more-link"><a class="thm-btn btn-sm read-more text-black" href="/Home/Blog">READ MORE</a></div>
+                </article>
+            </div>
+            <!--Post-->
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 blog-post wow fadeInRight" data-wow-delay="600ms" data-wow-duration="1500ms">
+                <article class="inner-box p-xs-20">
+                    <div class="image"><a href="blog-detail.html"><img class="img-responsive" src='@Url.Content("~/Content/images/resource/blog4.jpg")' alt=""></a></div>
+                    <div class="post-title"><h2><a href="/Events/Anniversary">Anniversary</a></h2></div>
+                    <div class="post-info"><a href="#"><span class="fa fa-user"></span>Vindhyan</a> &ensp;&ensp; <a href="#"><span class="fa fa-clock-o"></span>may 8, 2015</a></div>
+                    <div class="post-desc">
+                        @*<p>It has happened a countless number of times that you’ve shown up empty handed to my birthday parties. But not today,
+                            because I am inviting you to a very special day of my life. And you have to bring yourself to my wedding, with a 10000-watt smile on your
+                            face and fill the day with loads of happiness.
+                            </p>*@
+                </div>
+                <div class="more-link"><a class="thm-btn btn-sm read-more text-black" href="/Home/Blog">READ MORE</a></div>
+            </article>
+        </div>
+    </div>
+</div>
+</section>
+
+
+
+<script src='@Url.Content("~/Content/js/jquery.js")'></script>
+<script src='@Url.Content("~/Content/js/bootstrap.min.js")'></script>
+<script src='@Url.Content("~/Content/js/revolution.min.js")'></script>
+<script src='@Url.Content("~/Content/js/js-collection.js")'></script>
+<script src='@Url.Content("~/Content/js/script.js")'></script>

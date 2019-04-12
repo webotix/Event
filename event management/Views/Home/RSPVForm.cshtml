@@ -1,0 +1,140 @@
+﻿
+@{
+    ViewBag.Title = "RSPVForm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--Page Title-->
+<section class="page-title" style="background-image:url(../Content/images/background/page-title-1.jpg)">
+    <div class="auto-container">
+        <h1>RSVP</h1>
+
+        <ul class="bread-crumb">
+            <li><a href="/Home/Index">Home</a></li>
+            <li><a href="/Home/RSPV">RSVP</a></li>
+        </ul>
+
+    </div>
+
+    <!--Go Down Button-->
+    <div class="go-down">
+        <div class="curve scroll-to-target" data-target="#about-section"><span class="icon fa fa-arrow-down"></span></div>
+    </div>
+
+</section>
+
+
+<!--About Section-->
+<section class="about-section" id="about-section">
+    <!--Desc Box-->
+    <div class="desc-box">
+        <div class="auto-container">
+            <div class="sec-title no-underline">
+                <h3>RASHID WEDDING RSVP</h3>
+                <p>Pellentesque semper quis neque dictum hendrerit. Sed nulla ipsum, porttitor pharetra tortor in, <br>consequat imperdiet nisi. Phasellus at quam tristique, cursus tellus vitae, convallis neque. </p>
+            </div>
+        </div>
+    </div>
+
+    <!--Lower Content-->
+    <div class="lower-content" style="background-image:url(../Content/images/background/bg-pattern.png)">
+        <div class="auto-container">
+            <div class="content-box">
+                <div class="row clearfix">
+
+                    <div class="col-md-7">
+                        <h4 class="text-thm title-border font-weight-700 mt-0 mb-10">Fill Up The RSVP Now</h4>
+                        <p class="mb-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro similique ipsa deleniti doloribus fuga dicta id voluptate, excepturi nostrum cupiditate</p>
+
+                        <!-- Appointment Form Sart-->
+                        <form id="appointment_form" name="appointment_form" class="form-transparent mt-30" method="post" action="http://world5.commonsupport.com/html/rashid-wedding/rashid-wedding/inc/rsvp.php">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group mb-20">
+                                        <input data-height="45px" id="rsvp_name" name="rsvp_name" class="form-control bdrs-0" type="text" required="" placeholder="Full Name" aria-required="true">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group mb-20">
+                                        <input data-height="45px" id="rsvp_email" name="rsvp_email" class="form-control bdrs-0 required email" type="email" placeholder="Enter Email" aria-required="true">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group mb-20">
+                                        <input data-height="45px" id="form_phone" name="form_phone" class="form-control bdrs-0 required" type="text" placeholder="Enter Phone" aria-required="true">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="styled-select mb-20">
+                                        <select id="rsvp_category" name="rsvp_category" class="form-control" data-height="45px" required>
+                                            <option value="All events">All events</option>
+                                            <option value="Wedding Day">Wedding Day</option>
+                                            <option value="Ceremony Day">Ceremony Day</option>
+                                            <option value="Final Party">Final Party</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="styled-select2 mb-20">
+                                        <select id="rsvp_guest" name="rsvp_guest" class="form-control" data-height="45px" required>
+                                            <option value="All events">Number of guest</option>
+                                            <option value="one">1</option>
+                                            <option value="Two">2</option>
+                                            <option value="Three">3</option>
+                                            <option value="Four">4</option>
+                                            <option value="Five">5</option>
+                                            <option value="Five-plus">5+</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group mb-20">
+                                <textarea id="form_message" name="form_message" class="form-control bdrs-0 required" data-height="120px" placeholder="Enter Message" rows="5" aria-required="true"></textarea>
+                            </div>
+                            <div class="form-group mb-0 mt-20">
+                                <input id="form_botcheck" name="form_botcheck" class="form-control bdrs-0" type="hidden" value="">
+                                <button type="submit" class="btn thm-btn btn-flat" data-loading-text="Please wait...">Submit Now</button>
+                            </div>
+                        </form>
+                        <!-- Appointment Form Validation-->
+                        <script type="text/javascript">
+                                $("#appointment_form").validate({
+                                  submitHandler: function(form) {
+                                    var form_btn = $(form).find('button[type="submit"]');
+                                    var form_result_div = '#form-result';
+                                    $(form_result_div).remove();
+                                    form_btn.before('<div id="form-result" class="alert alert-success" role="alert" style="display: none;"></div>');
+                                    var form_btn_old_msg = form_btn.html();
+                                    form_btn.html(form_btn.data("loading-text"));
+                                    $(form).ajaxSubmit({
+                                      target: form_result_div,
+                                      success: function(data) {
+                                        form_btn.html(form_btn_old_msg);
+                                        $(form).find('.form-control').val('');
+                                        $(form_result_div).fadeIn('slow');
+                                        setTimeout(function(){ $(form_result_div).fadeOut('slow') }, 6000);
+                                      }
+                                    });
+                                  }
+                                });
+                        </script>
+                        <!-- Appointment Form Ends -->
+
+                    </div>
+                    <div class="col-md-5">
+                        <img alt="" src='@Url.Content("~/Content/images/resource/image-forlift2.png")' class="img-responsive img-fullwidth">
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
